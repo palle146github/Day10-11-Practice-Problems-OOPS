@@ -39,7 +39,18 @@ public class StockAccountManagement {
         return numberOfShares * sharePrice;
     }
 
-
+    public  void debit(int total_amount) {
+        System.out.println("Welcome to Debit window!!");
+        System.out.println("Please enter the amount to be debit!!");
+        int debitamount = sc.nextInt();
+        if(debitamount>total_amount) {
+            System.out.println("Debit amount exceeded account balance");
+        }
+        else {
+            System.out.println("Total Amount debited : " + debitamount);
+            System.out.println("Amount left in the account : " + (total_amount-debitamount));
+        }
+    }
 
     public static void main(String[] args) {
         int a = 0, b = 0;
@@ -47,5 +58,6 @@ public class StockAccountManagement {
         StockAccountManagement stock = new StockAccountManagement();
         stock.totalValueOfEachStock(a, b);
         int total_amount = stock.portfolioOfStock();
+        stock.debit(total_amount);
     }
 }
