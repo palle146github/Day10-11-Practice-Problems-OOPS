@@ -3,61 +3,58 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 public class StockAccountManagement {
-    static ArrayList<Stock> listStock = new ArrayList<Stock>();
-    Scanner sc = new Scanner(System.in);
-
-    public int portfolioOfStock() {
-        int accountbalance = 0;
-        System.out.println("First enter number of stocks: ");
-        int numberOfStocks = sc.nextInt();
-        for (int i = 0; i < numberOfStocks; i++) {
-            System.out.println("Enter the name of share: ");
-            String shareName = sc.next();
-            System.out.println("Enter number of shares: ");
-            int numberOfShares = sc.nextInt();
-            System.out.println("Enter share price: ");
-            int sharePrice = sc.nextInt();
-            listStock.add(new Stock(shareName, numberOfShares, sharePrice));
-            // totalStockValue(numberOfShares * sharePrice);
-            accountbalance = accountbalance + totalValueOfEachStock(numberOfShares, sharePrice);
-        }
-        return accountbalance;
-    }
-
-    public int totalValueOfEachStock(int numberOfShares, int sharePrice) {
-
-        int stockvalue = 0;
-        Iterator<Stock> itr = listStock.iterator();
-        while (itr.hasNext()) {
-            Stock s =itr.next();
-            int stock = s.getNumberOfShares() * s.getSharePrice();
-            System.out.println("Name of the stock: " + s.getStockName());
-            System.out.println("Total stock price of each stock: " + stock);
-            stockvalue = stockvalue + stock;
-        }
-        System.out.println("Total Value of all stocks: " + stockvalue);
-        return numberOfShares * sharePrice;
-    }
-
-    public  void debit(int total_amount) {
-        System.out.println("Welcome to Debit window!!");
-        System.out.println("Please enter the amount to be debit!!");
-        int debitamount = sc.nextInt();
-        if(debitamount>total_amount) {
-            System.out.println("Debit amount exceeded account balance");
-        }
-        else {
-            System.out.println("Total Amount debited : " + debitamount);
-            System.out.println("Amount left in the account : " + (total_amount-debitamount));
-        }
-    }
-
     public static void main(String[] args) {
-        int a = 0, b = 0;
-        System.out.println("Welcome to object oriented programs");
-        StockAccountManagement stock = new StockAccountManagement();
-        stock.totalValueOfEachStock(a, b);
-        int total_amount = stock.portfolioOfStock();
-        stock.debit(total_amount);
+        String stockname ;
+        boolean exit = false;
+        int option;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("********Welcome to Stock Management system!!!********");
+        System.out.println();
+        IStock stockobj = new StockAccountImplementation();
+
+        while(!exit){
+            System.out.println("***********Please select the operation you want to perform..!!***********");
+            System.out.println();
+            System.out.println(" 1.Create Stock Account  2. Print All details  3.View details of a particular account ");
+            System.out.println(" 4.Buy a new share   5.Sell an existing account  6. Exit");
+            option = sc.nextInt();
+
+            switch(option) {
+
+                case 1: System.out.println("Create Account option is selected.. Please enter the details!!");
+                    stockobj.createStockAccount();
+                    break;
+
+                case 2: System.out.println("*******Details of complete stock with total Account Balance is printed below!!*********");
+                    System.out.println();
+                    double accountbalance = stockobj.printReport();
+                    System.out.println("The total account balance of all the shares is : " +accountbalance);
+                    System.out.println();
+                    break;
+
+                case 3: System.out.println("*********You have selected to view details of your share!!!************");
+                    System.out.println();
+                    stockobj.valueOf();
+                    break;
+
+
+                case 4: Scanner sca = new Scanner(System.in);
+                    System.out.println("******You have bought a new share. Please enter the below details******");
+                    System.out.println("Please enter the name of the share!!!");
+                    stockname = sca.nextLine();
+                    stockobj.buy(stockname);
+                    break;
+
+                case 5 :Scanner scb = new Scanner(System.in);
+                    System.out.println("********You have selected to sell your share.  Please enter the below details*******");
+                    System.out.println("Please enter the name of the share!!!");
+                    stockname = scb.nextLine();
+                    stockobj.sell(stockname);
+                    break;
+
+                case 6: exit = true;
+                    System.out.println("**********You have exited the program!!**********");
+            }
+        }
     }
 }
