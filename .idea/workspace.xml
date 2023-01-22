@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1642078f-abed-470b-870f-6aca45693b54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/DeckOfCards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/IStock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/StockAccountImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/StockAccountManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/IStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/Stock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/StockAccountImplementation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/StockAccountManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/DeckOfCards.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Day11-12PracticeProblem/com/bridgelabz/oopsprograms/DeckOfCards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/oopsprograms/DeckOfCards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +39,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Card">

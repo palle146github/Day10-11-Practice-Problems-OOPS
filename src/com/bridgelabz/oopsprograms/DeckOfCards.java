@@ -1,8 +1,8 @@
 package com.bridgelabz.oopsprograms;
 
 public class DeckOfCards {
-    String[] suits = new String[] { "C", "H", "D","S" };
-    String[] ranks = new String[] { "2", "3", "4", "5", "6", "7","8", "9", "10", "J", "Q", "K", "A" };
+    String[] suits = {"C", "D", "H", "S"};
+    String[] ranks = {"A", "2", "3", "4", "5", "6","7", "8", "9", "10", "J", "Q", "K"};
     String[] deckOfCard = new String[52];
 
 
